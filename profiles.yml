@@ -1,0 +1,14 @@
+warehouse:
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST') }}"
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      port: 5432
+      dbname: midnite
+      schema: warehouse
+      threads: 4
+      keepalives_idle: 240
+      connect_timeout: 1800 # 30 minutes
