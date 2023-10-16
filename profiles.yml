@@ -1,4 +1,4 @@
-warehouse:
+lightdash_profile:
   target: prod
   outputs:
     prod:
